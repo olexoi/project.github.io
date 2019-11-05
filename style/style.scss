@@ -1,0 +1,225 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.navbar-desktop{
+    ul{
+      .logo{
+        width: 200px;
+      }
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        list-style: none;
+        li{
+            padding:40px 6px;
+            a{
+                text-decoration: none;
+                color: black;
+                font-size: 1.2rem;
+            }
+            a:hover{
+                text-decoration: none;
+            }
+        }
+        li:hover{
+            border-bottom: 2px solid mediumaquamarine;
+            a{
+                color: mediumaquamarine;
+            }
+        }
+    }
+    
+}
+@media only screen and(min-width:834px){
+    .navbar-desktop{
+        ul{
+            li{
+                padding: 40px 15px;
+            }
+        }
+    }
+}
+.navbar-mobile{
+    ul{
+        display: flex;
+        align-content: space-between;
+        width: 100%;
+        list-style: none;
+        background-color: #fff;
+        #burger-button{
+            font-size: 2rem;
+            color: grey;
+            padding: 20px;
+            margin-left: auto;
+        }
+        .logo{
+          padding: 15px;
+          height: 95px;
+        }
+        
+    }
+}
+.menu-trigger,
+.menu-trigger span {
+  display: inline-block;
+  transition: all .4s;
+  box-sizing: border-box;
+}
+.menu-trigger {
+  position: relative;
+  width: 48px;
+  height: 42px;
+}
+.menu-trigger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  border-radius: 4px;
+}
+.menu-trigger span:nth-of-type(1) {
+  top: 0;
+}
+.menu-trigger span:nth-of-type(2) {
+  top: 20px;
+}
+.menu-trigger span:nth-of-type(3) {
+  bottom: 0;
+}
+
+#menu12::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  content: '';
+  width: 45px;
+  height: 45px;
+  margin: -23px 0 0 -23px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  transition: all .75s;
+}
+#menu12.active span:nth-of-type(1) {
+  -webkit-transform: translateY(20px) rotate(-45deg);
+  transform: translateY(20px) rotate(-45deg);
+}
+#menu12.active span:nth-of-type(2) {
+  left: 60%;
+  opacity: 0;
+  -webkit-animation: active-menu12-bar02 .8s forwards;
+  animation: active-menu12-bar02 .8s forwards;
+}
+@-webkit-keyframes active-menu12-bar02 {
+  100% {
+    height: 0;
+  }
+}
+@keyframes active-menu12-bar02 {
+  100% {
+    height: 0;
+  }
+}
+#menu12.active span:nth-of-type(3) {
+  -webkit-transform: translateY(-20px) rotate(45deg);
+  transform: translateY(-20px) rotate(45deg);
+}
+#menu12.active::after {
+  -webkit-animation: active-menu12 .4s .25s forwards;
+  animation: active-menu12 .4s .25s forwards;
+}
+@-webkit-keyframes active-menu12 {
+  0% {
+    border-color: transparent;
+    -webkit-transform: rotate(0);
+  }
+  25% {
+    border-color: transparent black transparent transparent;
+  }
+  50% {
+    border-color: transparent black black transparent;
+  }
+  75% {
+    border-color: transparent black black black;
+  }
+  100% {
+    border-color: black;
+    -webkit-transform: rotate(-680deg);
+  }
+}
+@keyframes active-menu12 {
+  0% {
+    border-color: transparent;
+    transform: rotate(0);
+  }
+  25% {
+    border-color: transparent black transparent transparent;
+  }
+  50% {
+    border-color: transparent black black transparent;
+  }
+  75% {
+    border-color: transparent black black black;
+  }
+  100% {
+    border-color: black;
+    transform: rotate(-680deg);
+  }
+}
+
+.display-none{
+    display: none;
+}
+#burger-menu{
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    padding: 0;
+    ul{
+        padding: 0;
+    }
+    a{
+        padding: 30px 30px 30px 30px;
+        display: flex;
+        flex-direction: column;
+    }
+    li:hover{
+        background-color: lightgrey;
+    }
+    li{
+        list-style: none;
+        a{
+            text-decoration: none;
+            color: black;
+            font-size: 1.4rem;
+        }
+        a:hover{
+            text-decoration: none;
+        }
+    }
+    
+}
+
+@media only screen and (max-width:714px){
+    .navbar-desktop{
+        display: none;
+    }
+    .main-carousel{
+        max-height: 375px;
+        .carousel-item {
+            max-height: 375px;
+          }
+    }
+}
+@media only screen and (min-width:714px){
+    .navbar-mobile{
+        display: none;
+    }
+    #burger-menu{
+        display: none;
+    }
+}
