@@ -492,8 +492,7 @@ button:nth-child(3):hover{
 
   .work{
     color: rgb(119, 252, 185);
-    width: 200px;
-    height: 250px;
+    width: 100%;
     align-items: center;
     justify-content: center;
     background-color: black;
@@ -543,8 +542,7 @@ i {
     }
 
 .customers{
-    width: 200px;
-    height: 250px;
+     width: 100%;
     align-items: center;
     justify-content: center;
     background-color: rgb(119, 252, 185);
@@ -572,8 +570,7 @@ i {
 
 
 .purchase{
-    width: 200px;
-    height: 250px;
+     width: 100%;
     align-items: center;
     justify-content: center;
     background-color: black;
@@ -600,8 +597,7 @@ i {
 }
 
 .office{
-    width: 200px;
-    height: 250px;
+   width: 100%;
     align-items: center;
     justify-content: center;
     background-color: rgb(119, 252, 185);
